@@ -1,0 +1,36 @@
+<h1>This is model form</h1>
+ <form [formGroup]="customerForm" class="container" (ngSubmit)="onsubmit()" novalidate>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" required minlength="4" class="form-control" formControlName="name" >
+           <!-- <div [hidden]="nameRef.valid || nameRef.pristine" class="alert alert-danger"> Please enter name </div>
+            -->
+             
+             
+             </div> 
+         <div class="form-group">
+            <label>email</label>
+            <input type="text" class="form-control" formControlName="email" >
+              </div>
+      <div formGroupName="address">
+            <div class="form-group">
+                    <label>street</label>
+                    <input type="text" class="form-control" formControlName="street" >
+                    </div>
+            <div class="form-group">
+                    <label>City</label>
+                    <input type="text" class="form-control" formControlName="city" >
+                    </div>
+            <div class="form-group">
+                    <label>zip code</label>
+        <input type="text"  class="form-control" formControlName="zipCode" >
+
+
+                    </div>
+       
+        </div>
+<br>
+        <button type="submit" class="btn btn-primary">submit</button>
+       
+       
+        </form>
